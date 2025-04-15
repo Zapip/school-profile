@@ -1,7 +1,7 @@
 "use client";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-export default function Blog() {
+const Blog = () => {
   return (
     <article className="p-4 md:p-20 h-full md:h-screen grid grid-cols-1 md:grid-cols-2 gap-20">
       <section className="flex flex-col justify-center gap-8 relative">
@@ -98,4 +98,5 @@ export default function Blog() {
       </section>
     </article>
   );
-}
+};
+export default Blog;

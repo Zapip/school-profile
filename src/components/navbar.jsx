@@ -8,7 +8,7 @@ const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
 };
 
-export default function Navbar() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -89,7 +89,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="/ppdb"
+              href="#ppdb"
               className="px-1 py-2 text-gray-800 hover:text-orange-500"
             >
               PPDB
@@ -275,7 +275,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/ppdb"
+                href="#ppdb"
                 className="border-b py-2 text-gray-800 hover:text-orange-500"
               >
                 PPDB
@@ -358,4 +358,5 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+export default Navbar;
