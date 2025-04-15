@@ -65,7 +65,7 @@ function chunkArray(array, size) {
   return result;
 }
 
-export default function Testimoni() {
+const Testimoni = () => {
   const testiPerPage = 3;
   const slides = chunkArray(testimonies, testiPerPage);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -143,4 +143,5 @@ export default function Testimoni() {
       </section>
     </article>
   );
-}
+};
+export default Testimoni;

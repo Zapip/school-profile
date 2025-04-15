@@ -1,6 +1,6 @@
-import Testimoni from "@/components/shared/testimoni";
 import Blog from "@/components/shared/blog";
 import Ppdb from "@/components/shared/ppdb";
+import Testimoni from "@/components/shared/testimoni";
 
 export default function Home() {
   return (
