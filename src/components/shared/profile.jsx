@@ -28,7 +28,7 @@ const Profile = () => {
           {/* Iframe Container */}
           <div className="aspect-video w-full bg-black rounded-b-xl overflow-hidden shadow-lg">
             <iframe
-              className="w-full h-auto"
+              className="w-full h-full"
               src="https://www.youtube.com/embed/CGr98yMNA5E?si=isqUCiNw0ndDUKaP"
               title="YouTube Video"
               frameBorder="0"
