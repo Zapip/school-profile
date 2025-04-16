@@ -14,7 +14,7 @@ const labelColors: Record<CardProps["label"], string> = {
 
 const Card: React.FC<CardProps> = ({ label, title, description }) => {
   return (
-    <div className="bg-white rounded-xl shadow p-4 w-58 h-80 flex flex-col">
+    <div className="bg-white rounded-xl shadow-lg p-4 w-[220px] h-80 flex flex-col">
       <span className={`text-[15px] px-3 py-1 rounded-lg w-fit ${labelColors[label]}`}>
         {label}
       </span>
