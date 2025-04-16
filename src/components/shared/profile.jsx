@@ -1,4 +1,5 @@
 import Image from "next/image";
+import VideoBrowserFrame from "../atoms/VideoCard";
 
 const Profile = () => {
   return (
@@ -13,7 +14,7 @@ const Profile = () => {
       </h3>
 
       <div className="w-full h-220 aspect-video flex justify-center">
-        <div className="w-[80%] max-w-7xl mx-auto px-4 pb-4">
+        <div className="w-full max-w-7xl mx-auto px-4 pb-4">
           {/* Frame header seperti browser tab */}
           <div className="bg-white rounded-t-xl px-4 py-2 flex items-center justify-between">
             <div className="flex gap-2">
