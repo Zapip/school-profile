@@ -26,7 +26,7 @@ export default function Fasilitas() {
   ];
 
   return (
-    <section className="w-full  px-10 md:px-20 py-20 bg-white bg-[url('/facilitybg.png')] bg-cover bg-center">
+    <section className="w-full px-10 md:px-20 py-20 bg-white bg-[url('/facilitybg.png')] bg-cover bg-center">
       <div className="grid grid-cols-5 gap-10 items-start">
         {/* Left content */}
         <div className="col-span-2 flex-1">
