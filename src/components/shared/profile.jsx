@@ -1,4 +1,5 @@
 import Image from "next/image";
+import VideoBrowserFrame from "../atoms/VideoCard";
 
 const Profile = () => {
   return (
@@ -13,30 +14,7 @@ const Profile = () => {
       </h3>
 
       <div className="w-full h-220 aspect-video flex justify-center">
-        <div className="w-full max-w-7xl mx-auto px-4 pb-4">
-          {/* Frame header seperti browser tab */}
-          <div className="bg-white rounded-t-xl px-4 py-2 flex items-center justify-between">
-            <div className="flex gap-2">
-              <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-              <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
-              <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-            </div>
-            <span className="text-sm text-gray-600">uteach.com</span>
-            <div className="w-16" /> {/* Spacer */}
-          </div>
-
-          {/* Iframe Container */}
-          <div className="aspect-video w-full bg-black rounded-b-xl overflow-hidden shadow-lg">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/CGr98yMNA5E?si=isqUCiNw0ndDUKaP"
-              title="YouTube Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
+        <VideoBrowserFrame videoUrl="https://www.youtube.com/embed/CGr98yMNA5E?si=isqUCiNw0ndDUKaP" />
       </div>
     </section>
   );
