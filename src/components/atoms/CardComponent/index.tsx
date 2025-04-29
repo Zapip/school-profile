@@ -14,17 +14,16 @@ const labelColors: Record<CardProps["label"], string> = {
 
 const Card: React.FC<CardProps> = ({ label, title, description }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 w-[220px] h-80 flex flex-col">
-      <span className={`text-[15px] px-3 py-1 rounded-lg w-fit ${labelColors[label]}`}>
+    <div className="bg-white rounded-xl shadow-lg p-4 w-full md:w-56 h-fit flex flex-col">
+      <span
+        className={`text-sm px-3 py-1 rounded-lg w-fit ${labelColors[label]}`}
+      >
         {label}
       </span>
       <h3 className="mt-3 font-semibold text-2xl">{title}</h3>
-      <p className="mt-2 text-[16px] text-gray-600">{description}</p>
+      <p className="mt-2 text-l text-gray-600">{description}</p>
 
-      {/* Spacer agar button selalu di bawah */}
-      <div className="flex-grow" />
-
-      <button className="align-bottom font-bold text-blue-600 border text-lg border-2 border-blue-600 rounded-xl px-5 py-1 hover:bg-blue-50 transition">
+      <button className="align-bottom font-bold mt-4 text-blue-600 text-lg border-2 border-blue-600 rounded-xl px-5 py-1 hover:bg-blue-50 transition">
         Selengkapnya
       </button>
     </div>
