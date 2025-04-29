@@ -3,7 +3,7 @@ import VideoBrowserFrame from "../atoms/VideoCard";
 const Profile = () => {
   return (
     <article className="bg-[url('/bgprofile.png')] bg-cover bg-center h-fit w-full p-4 md:p-20 py-8">
-      <h1 className="flex text-3xl justify-center md:text-6xl font-black text-gray text-center">
+      <h1 className="flex text-3xl justify-center md:text-5xl font-black text-gray text-center">
         Bersama SMAN X, Raih Pendidikan Terbaik
       </h1>
 
