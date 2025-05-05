@@ -53,7 +53,7 @@ const Navbar = () => {
               {openDropdown === "tentang" && (
                 <div className="absolute left-0 top-full z-10 mt-1 w-48 rounded-md bg-white py-2 shadow-lg">
                   <Link
-                    href="/tentang/profil"
+                    href="#video_profile"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Profil
@@ -239,7 +239,7 @@ const Navbar = () => {
                 {openDropdown === "tentang-mobile" && (
                   <div className="ml-4 mt-2 flex flex-col space-y-2">
                     <Link
-                      href="/tentang/profil"
+                      href="#video_profile"
                       className="py-1 text-gray-600 hover:text-orange-500"
                     >
                       Profil

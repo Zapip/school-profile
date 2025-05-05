@@ -1,25 +1,22 @@
 // import Image from "next/image";
-// import GalleryGrid from "../atoms/GalleryGrid";
+import GalleryGrid from "../atoms/GalleryGrid";
 const Kegiatan = () => {
   return (
-    <section className="w-full h-fit px-10 md:px-20 py-20 bg-white flex flex-col md:flex-row justify-between ">
-      <div className="w-1/2 bg-[url('/Col.png')] bg-cover bg-center"></div>
-      {/* <GalleryGrid
-        images={[
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-2" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-3" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-2" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-2" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-6" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-6" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-1" },
-          { src: "/kemendikbud.png", className: "col-span-1 row-span-1" },
-          // ...tambahkan sesuai pola yang kamu inginkan
-        ]}
-      /> */}
+    <article className="w-full h-fit px-10 md:px-20 py-20 bg-white flex flex-col md:flex-row justify-between ">
+      {/* <section className="w-1/2 bg-[url('/Col.png')] bg-cover bg-center hidden md:block"></section> */}
+      <GalleryGrid />
 
-      <section className="w-1/2 ml-5 py-12">
-        <h1 className="text-5xl text-gray-900 font-black">
+      {/* //   { src: "/kemendikbud.png", className: "col-span-1 row-span-2" },
+        //   { src: "/kemendikbud.png", className: "col-span-1 row-span-2" },
+        //   { src: "/kemendikbud.png", className: "col-span-1 row-span-6" },
+        //   { src: "/kemendikbud.png", className: "col-span-1 row-span-6" },
+        //   { src: "/kemendikbud.png", className: "col-span-1 row-span-1" },
+        //   { src: "/kemendikbud.png", className: "col-span-1 row-span-1" },
+        //   // ...tambahkan sesuai pola yang kamu inginkan
+        // */}
+
+      <section className="md:w-1/2 py-12">
+        <h1 className=" text-2xl md:text-5xl text-gray-900 font-black">
           Intip Keseruan Kegiatan Kami Disini
         </h1>
         <h3 className="py-12 text-xl text-gray-900 leading-relaxed">
@@ -38,7 +35,7 @@ const Kegiatan = () => {
           Jelajahi semua kegiatan kami →
         </a>
       </section>
-    </section>
+    </article>
   );
 };
 

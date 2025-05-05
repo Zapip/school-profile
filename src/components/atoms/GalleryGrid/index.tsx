@@ -1,36 +1,67 @@
 import React from "react";
 import Image from "next/image";
 
-export type GalleryItem = {
-  src: string;
-  alt?: string;
-  className?: string;
-};
+const GalleryGrid = () => {
+  const images = [
+    // Kolom 1
+    [
+      { src: "/kemendikbud.png", w: "w-32", h: "h-48" },
+      { src: "/kemendikbud.png", w: "w-32", h: "h-64" },
+    ],
+    // Kolom 2
+    [
+      { src: "/kemendikbud.png", w: "w-32", h: "h-52" },
+      { src: "/kemendikbud.png", w: "w-32", h: "h-52" },
+      { src: "/kemendikbud.png", w: "w-32", h: "h-40" },
+    ],
+    // Kolom 3
+    [
+      { src: "/kemendikbud.png", w: "w-32", h: "h-44" },
+      { src: "/kemendikbud.png", w: "w-32", h: "h-44" },
+      { src: "/kemendikbud.png", w: "w-32", h: "h-48" },
+    ],
+    // Kolom 4
+    [
+      { src: "/kemendikbud.png", w: "w-32", h: "h-64" },
+      { src: "/kemendikbud.png", w: "w-32", h: "h-40" },
+    ],
+  ];
 
-interface GalleryGridProps {
-  images: GalleryItem[];
-}
-
-const GalleryGrid = ({ images }: GalleryGridProps) => {
   return (
-    <article className="grid grid-cols-4 grid-rows-6 gap-4 max-w-6xl mx-auto relative w-1/2 h-full">
-      {images.map((img, i) => (
-        <section
-          key={i}
-          className={`relative w-full overflow-hidden rounded-xl ${
-            img.className || "col-span-1 row-span-2"
+    <div className="flex justify-center items-start gap-4 flex-wrap md:flex-nowrap px-4 w-1/2">
+      {images.map((col, colIndex) => (
+        <div
+          key={colIndex}
+          className={`inline-flex flex-col items-center gap-4 ${
+            colIndex === 0
+              ? "pt-20"
+              : colIndex === 1
+              ? "pt-4"
+              : colIndex === 2
+              ? "pt-4"
+              : colIndex === 3
+              ? "pt-16"
+              : ""
           }`}
         >
-          <Image
-            src={img.src}
-            alt={img.alt || "Gallery Image"}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 25vw"
-          />
-        </section>
+          {col.map((img, i) => (
+            <div
+              key={i}
+              className={`${img.w} ${img.h} rounded-xl overflow-hidden shadow-md outline-1`}
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={img.src}
+                  alt={`Gallery ${colIndex}-${i}`}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       ))}
-    </article>
+    </div>
   );
 };
 export default GalleryGrid;
