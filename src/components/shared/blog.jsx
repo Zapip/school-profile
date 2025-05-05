@@ -23,7 +23,7 @@ const Blog = () => {
   ];
 
   return (
-    <article className="p-4 md:p-20 h-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
+    <article className="p-4 py-20 md:p-20 h-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
       <section className="flex flex-col justify-center gap-4 md:gap-8 relative">
         <span className="absolute left-6 md:left-48 hidden md:block">
           <svg
@@ -41,21 +41,22 @@ const Blog = () => {
             />
           </svg>
         </span>
-        <h1 className="text-lg md:text-6xl font-extrabold text-gray text-center md:text-left">
+        <h1 className="text-3xl md:text-6xl font-extrabold text-gray text-center md:text-left">
           Tetap Update dengan Kami!
         </h1>
-        <p className="text-xs md:text-base text-center md:text-left">
+        <p className="text-xl text-center md:text-left">
           Temukan berbagai artikel/berita menarik tentang kegiatan sekolah,
           prestasi siswa, dan informasi pendidikan terbaru.
         </p>
-        <button className="flex gap-2 md:gap-4 items-center justify-center md:justify-start text-blue font-medium text-xs md:text-xl hover:text-blue-800">
+        <button className="flex gap-2 md:gap-4 items-center justify-center md:justify-start text-blue font-medium text-xl hover:text-blue-800">
           Selengkapnya
           <ArrowRightIcon className="w-4 h-4 md:w-6 md:h-6 stroke-blue stroke-1" />
         </button>
       </section>
-      <section className="flex justify-center items-center relative">
+
+      <section className="md:flex justify-center items-center hidden md:relative">
         <svg
-          className="w-32 h-32 md:w-full md:h-full"
+          className="w-24 h-24 sm:w-32 sm:h-32 md:w-full md:h-full"
           viewBox="0 0 534 523"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

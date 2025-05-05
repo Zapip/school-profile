@@ -28,19 +28,19 @@ const GalleryGrid = () => {
   ];
 
   return (
-    <div className="flex justify-center items-start gap-4 flex-wrap md:flex-nowrap px-4 w-1/2">
+    <div className="hidden md:flex justify-center items-start gap-4 flex-wrap md:flex-nowrap px-4 w-full md:w-1/2">
       {images.map((col, colIndex) => (
         <div
           key={colIndex}
           className={`inline-flex flex-col items-center gap-4 ${
             colIndex === 0
-              ? "pt-20"
+              ? "pt-0 md:pt-20"
               : colIndex === 1
               ? "pt-4"
               : colIndex === 2
               ? "pt-4"
               : colIndex === 3
-              ? "pt-16"
+              ? "pt-0 md:pt-16"
               : ""
           }`}
         >
